@@ -1,0 +1,36 @@
+[
+  {
+    "username":"teja0594",
+    "password":"123q",
+    "roles":["USER","ADMIN"],
+    "bio":{
+            "fname":"Teja",
+            "lname":"Kedari",
+             "age"  :21,
+             "email":"kedariteja1999@gmail.com",
+             "phone":[9553878342,9346585612]
+          },
+    "address":{
+                "city":"Vijayawada",
+                "state":"Andhra Pradesh",
+                "pincode":520012
+              }
+  },
+  {
+    "username":"prem",
+    "password":"123q",
+    "roles":["USER"],
+    "bio":{
+            "fname":"Prem",
+            "lname":"Kumar",
+             "age"  :21,
+             "email":"prem@gmail.com",
+             "phone":[955333246,9346237593]
+          },
+    "address":{
+                "city":"Guntur",
+                "state":"AP",
+                "pincode":520113
+              }
+  }
+]

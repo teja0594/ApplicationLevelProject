@@ -1,0 +1,41 @@
+
+<div class="container" align="center">
+  <br>
+  <h2><b>Login</b></h2><hr>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <div class="input-group mb-3">
+           <span class="input-group-text">Username</span>
+           <input type="text" class="form-control" [(ngModel)]="username" >
+        </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <div class="input-group mb-3">
+           <span class="input-group-text">Password</span>
+           <input type="password" class="form-control" [(ngModel)]="password" >
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-success" (click)="setUser()">Login</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="setUser()">Cancel</button>
+      </td>
+    </tr>
+    <tr *ngIf="hid">
+<td class="text-danger"><h3 align="center"><b>{{displaymsg}}</b> </h3>  </td>
+    </tr>
+  </table>
+
+  <br>
+  <hr>
+
+</div>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+

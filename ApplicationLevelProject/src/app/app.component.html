@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand"  routerLink="/home">{{'title'|translate}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li [hidden]="!isLoggedIn" class="nav-item dropdown">
+        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{'assignment'|translate}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/assignments/calculator">{{'assignment'|translate}} 9</a>
+          <a class="dropdown-item" routerLink="/assignments/products">{{'assignment'|translate}} 10</a>
+          <a class="dropdown-item" routerLink="/assignments/parent-child">{{'assignment'|translate}} 11</a>
+          <a class="dropdown-item" routerLink="/assignments/siblings">{{'assignment'|translate}} 12</a>
+          </div>
+      </li>
+      <li [hidden]="!isLoggedIn" class="nav-item">
+        <a class="nav-link" routerLink="/tech/java">{{'java'|translate}}</a>
+      </li>
+      <li [hidden]="!isLoggedIn" class="nav-item">
+        <a class="nav-link" routerLink="/tech/web">{{'web'|translate}}</a>
+      </li>
+      <li [hidden]="!isLoggedIn" class="nav-item">
+        <a class="nav-link" routerLink="/ecommerce/products">{{'product'|translate}}</a>
+      </li>
+      <li [hidden]="!isLoggedIn" class="nav-item dropdown">
+        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{'forms'|translate}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/angularForms/tempforms">{{'tempforms'|translate}}</a>
+          <a class="dropdown-item" routerLink="/angularForms/reactiveforms">{{'reactforms'|translate}}</a>
+          </div>
+      </li>
+
+    </ul>
+
+
+        <span [hidden]="!isLoggedIn"  style="color: white;" class=" material-icons">language</span>
+        <select [hidden]="!isLoggedIn" (change)="changeLang()"   class="wd" [(ngModel)]="language" >
+          <option [value]="'english'">English</option>
+          <option [value]="'french'">French</option>
+          <option [value]="'japanese'">Japanese</option>
+          <option [value]="'hindi'">Hindi</option>
+        </select>
+        <button [hidden]="isLoggedIn" class="btn btn-primary " (click)="toLogIn()">Login</button>
+        <button [hidden]="!isLoggedIn"   class="btn" (click)="toProfile()" style="color: white;outline: none;">{{currentUser.username}}</button>
+        <button [hidden]="!isLoggedIn"   class="btn btn-danger " (click)="toLogOut()">Logout</button>
+
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+  <router-outlet></router-outlet>
+  <app-footer [appname]="title"></app-footer>
