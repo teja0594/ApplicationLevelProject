@@ -12,8 +12,8 @@ Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The ap
 
 ## Login Crredientials
 
-1: username: `teja0594` 
-   password:  `123q`
+1=> username: `teja0594` 
+    password:  `123q`
    
-2: username: `prem`
-   password: `123q`
+2=> username: `prem`
+    password: `123q`
